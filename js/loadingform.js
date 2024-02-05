@@ -17,7 +17,7 @@ const func = function () {
   if (!isVisible && checkVisible('#sec3', 'above')) {
       $(function () {
           function step0() {
-              setTimeout(step1, 1500); // 로딩 > 넘어가는 속도
+              setTimeout(step1, 500); // 로딩 > 넘어가는 속도
           }
           function step1() {
               $('.step-list').attr('class', 'step-list').addClass('step-1');
