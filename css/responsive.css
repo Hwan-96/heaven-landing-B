@@ -1,0 +1,227 @@
+/* responsive */
+@media all and (max-width:1080px) {
+  #sec0{
+    display: block;
+    position: relative;
+  }
+  #sec0 h3{
+    position: absolute;
+    width: 100%;
+    top: 36%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+  }
+  #sec0 .scrolling-animation{
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #sec0 .title img{display: none;}
+  #sec0 .title{
+    margin: 0;
+    display: none;
+  }
+
+  /* section1 */
+  #sec1{
+    height: 100%;
+    max-width: 1080px;
+    width: 100%;
+  }
+  #sec1 .about-list{grid-template-columns: repeat(2, 240px)}
+  #sec1 .about-title h2{font-size: 3rem;}
+  #sec1 .about-title h2 span{font-size: 4.4rem;}
+
+
+
+  /* dropbox */
+  .drop-down .top-banner h6{font-size: 2rem;}
+
+  /* 하단 신청하기 */
+  .go-form {height: auto;}
+  .go-form ul li:nth-child(1),
+  .go-form ul li:nth-child(3){display: none;}
+  .go-form ul li .press-btn{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media all and (max-width:980px) {
+  #sec2 div .menu li span{display: none;}
+  #sec2 div .menu li em{display: none;}
+}
+
+
+@media all and (max-width:580px) {
+  #sec0 h3{font-size: 2rem;}
+  /* section1 */
+  #sec1 .about-list{grid-template-columns: repeat(1, 320px)}
+
+  /* section2 */
+  #sec2 div .sec2-title{margin: 20px;}
+  #sec2 div .sec2-title h6{
+    font-size: .8rem;
+    white-space: pre-line;
+  }
+  #sec2 div .sec2-title h6 p{display: inline;}
+  #sec2 div .sec2-title h3{font-size: 1.25rem;}
+  #sec2 div .sec2-title h2{font-size: 2rem;}
+  #sec2 > div .menu{display: none;}
+  
+  /* sec2 모바일 */
+  #sec2 #moMenu{display: block;}
+  #moMenu.active .mo-menu-inner ul li{scale: 1;}
+  #sec2 #moMenu {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #sec2 #moMenu.active .mo-menu-toggle {
+    transform: rotate(360deg);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 0 0 0 2px #333, 0 0 0 8px #fff;
+  }
+  #sec2 #moMenu.active li {
+    scale: 1;
+  }
+  #sec2 #moMenu .mo-menu-toggle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    transition: 1.25s;
+    z-index: 10;
+  }
+  #sec2 #moMenu .mo-menu-toggle::after {
+    content: "";
+    background-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    border-radius: 50%;
+    z-index: -1;
+    animation: circle 1.2s linear infinite;
+  }
+  #sec2 #moMenu .mo-menu-toggle img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  #sec2 #moMenu ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    position: relative;
+    bottom: 0;
+  }
+  #sec2 #moMenu ul li {
+    bottom: 0;
+    transition: 0.5s;
+    scale: 0;
+    transition-delay: calc(0.2s * var(--i));
+    font-weight: normal;
+  }
+  #sec2 #moMenu li:hover span {
+    opacity: 1;
+    right: 90%;
+  }
+  #sec2 #moMenu li:hover em {
+    opacity: 1;
+    left: 90%;
+  }
+  #sec2 #moMenu li p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 50px;
+    background: #fff;
+    color: #111;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+  }
+
+
+  /* section3 */
+  #sec3 .step-list .step2 .inner{gap: 0;}
+  #sec3 .step-list .step2 h3{font-size: 3rem;}
+  #sec3 .step-list .step2 .caption{font-size: .8rem;}
+  #sec3 .step-list .step2 .form-body > div, #sec3 .step-list .step2 .form-body > ul{
+    padding: 10px 0;
+  }
+  #sec3 .step-list .step2 .form-body .radioBox .invest .investType-option{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #sec3 .step-list .step2 .btn-guide{bottom: 0;}
+  #sec3 .step-list .step2 .form-body .radioBox .invest.invest-time{
+    display: block;
+    text-align: center;
+  }
+  #sec3 .step-list .step2 .form-body .radioBox .invest .investType-option li{margin: 4px;}
+  #sec3 .step-list .step2 .form-body .radioBox .invest-time li:nth-child(1){text-align: center;}
+  #sec3 .step-list .step2 .form-body .radioBox .invest .ratio-select{display: flex;}
+
+  #sec3 .step-list .step2 .form-body .check_box{grid-template-columns: repeat(1,1fr);}
+
+  #sec3 .step-list .step2 .btn-guide button{padding: 3px 20px; box-shadow: rgb(255, 85, 85) 8px 8px 0px -3px;}
+  #sec3 .step-list .step2 .btn-guide button span{font-size: 2rem;}
+  #sec3 .step-list .step2 .form-body > div, #sec3 .step-list .step2 .form-body > ul{width: 100%;}
+
+  /* section4 */
+  #profit .swiper.swiper-first{height: auto;}
+  #profit .profit-img img{width: 200px; height: 352px;}
+
+  #sec4{justify-content: center;}
+  #liveList .swiper.verticalSwiper{height: 140px;}
+  #profit p{font-size: 2.5rem; margin-bottom: 5px;}
+  #liveList p{font-size: 2.5rem; margin: 5px 0;}
+  #liveList .swiper{padding: 0 10px;}
+
+  /* footer */
+  footer{padding-bottom: 60px;}
+
+/* dropbox */
+  .drop-down .top-banner h6{font-size: 1.2rem; line-height: 40px;}
+  .drop-down .top-banner{height: 40px;}
+/* 하단 신청하기 */
+  .go-form ul li img{height: auto; width: 80%;}
+}
+
+
+@media all and (max-width:359px) {
+  /* section1 */
+  #sec1 .about-list{grid-template-columns: repeat(1, 260px)}
+
+  /* section2 */
+  #sec2 #moMenu ul{grid-template-columns: repeat(2,120px);}
+  #sec2 #moMenu li p{width: 110px; height: 40px; padding: 3px 5px; font-size: .8rem;}
+  #sec2 div .sec2-title h6{font-size: .65rem;}
+  #sec2 div .sec2-title h2{font-size: 1.4rem;}
+
+  /* section3 */
+  #sec3 .step-list .step2 h3{font-size: 2rem;}
+  #sec2 div .sec2-title h3{font-size: 1rem;}
+
+  /* section4 */
+  #liveList .swiper.verticalSwiper{height: 100px;}
+  #profit p{font-size: 2rem; margin-bottom: 5px;}
+  #liveList p{font-size: 2rem; margin: 5px 0;}
+
+  /* dropbox */
+  .drop-down .top-banner h6{font-size: 1rem;}
+}
