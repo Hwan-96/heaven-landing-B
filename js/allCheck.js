@@ -36,11 +36,10 @@ for(chk of chks){
 /* 약관 동의 */
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('.btn-guide').addEventListener('click', function (event) {
+  document.querySelector('.btn-guide button').addEventListener('click', function (event) {
       let chkAll = document.getElementById('chkAll');
       if (!chkAll.checked) {
           alert("아래 전체약관에 동의해야 합니다.");
-          event.preventDefault(); // 링크 클릭 이벤트 중지
           return false;
       }
 
@@ -61,12 +60,24 @@ document.addEventListener('DOMContentLoaded', function () {
           return false;
       }
 
+      if (!/^[가-힣]+$/.test(nameValue)) {
+        alert("한글을 입력해주세요.");
+        event.preventDefault();
+        return false;
+      }
+
       let telInput = document.querySelector('input[name="tel2"]');
       let telValue = telInput.value.trim();
       if (telValue === "") {
-          alert("전화번호를 입력해주세요.");
-          event.preventDefault();
-          return false;
+        alert("전화번호를 입력해주세요.");
+        event.preventDefault();
+        return false;
+      }
+
+      if (!/^\d+$/.test(telValue)) {
+        alert("전화번호는 숫자만 입력해주세요.");
+        event.preventDefault();
+        return false;
       }
 
       let option1Checked = false;
@@ -93,6 +104,10 @@ document.addEventListener('DOMContentLoaded', function () {
           return false;
       }
 
-      document.querySelector('.modal-form').submit();
-  });
+      let form = document.querySelector('.form-body');
+
+      document.querySelector('.form-body').submit();
+
+      window.location.href = 'success.html';
+    });
 });
