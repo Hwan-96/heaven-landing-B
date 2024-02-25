@@ -554,7 +554,7 @@ body {
   margin: 7px;
 }
 #sec3 .step-list .step2 .form-body .radioBox .invest-time li {
-  /* flex: 1; */
+  flex: 1;
 }
 #sec3 .step-list .step2 .form-body .radioBox .invest-time li:nth-child(1) {
   text-align: left;

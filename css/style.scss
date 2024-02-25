@@ -626,6 +626,9 @@ body{
           position: relative;
           .checkBox{
             margin: 5px 0;
+            &.check04{
+              // grid-column: span 2;
+            }
           }
           .checkAllBtn,
           .checkBtn{
